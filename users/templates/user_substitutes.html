@@ -27,21 +27,26 @@
     <div class="container">
         <div class="row" style="background-color:  #c45525;">
 
-            {% for product in products %}
-                <div class="col-auto-10 col-md-4" style="background-color:  #c45525;">
-                    <div class="card" style="width: 15em; background-color: #c45525;">
-                        <div class="card-body">
-                            <img class="float-right" src="/static/icons/nut_{{product.nutriscore}}.png">
-                            <img class="card-img-top" src={{product.photo}} alt="Card image cap" style="height: 14em;">
-                            <h5 class="card-title">{{product.name}}</h5>
-                            <h6 class="card-title">De marque: {{product.brand}}<br>Chez: {{product.brand}}</h6>
-                            <form>
-                                <a href="delete_product/{{product.id}}" class="btn btn-primary btn-lg active" role="button" style="background-color: red;">Supprimer</a>
-                                <p3 id="id_product">{{product.id}}</p3>
-                            </form>
+            {% for category in categorys %}
+                <h2>{{category}}</h2>
+
+                {% for product in products %}
+                    <div class="col-auto-10 col-md-4" style="background-color:  #c45525;">
+                        <div class="card" style="width: 15em; background-color: #c45525;">
+                            <div class="card-body">
+                                <img class="float-right" src="/static/icons/nut_{{product.nutriscore}}.png">
+                                <img class="card-img-top" src={{product.photo}} alt="Card image cap" style="height: 14em;">
+                                <h5 class="card-title">{{product.name}}</h5>
+                                <h6 class="card-title">De marque: {{product.brand}}<br>Chez: {{product.brand}}</h6>
+                                <form>
+                                    <a href="delete_product/{{product.id}}" class="btn btn-primary btn-lg active" role="button" style="background-color: red;">Supprimer</a>
+                                    <p3 id="id_product">{{product.id}}</p3>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
+                {% endfor %}
+
             {% endfor %}
 
         </div>

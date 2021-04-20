@@ -191,11 +191,11 @@ def user_substitutes(request):
     list_of_category.sort()
 
     context = {
-        'category': list_of_category,
+        'categorys': list_of_category,
         'products': list_of_saved_products,
     }
 
-    print(context['category'])
+    print(context['categorys'])
 
     return render(request, 'user_substitutes.html', context)
 

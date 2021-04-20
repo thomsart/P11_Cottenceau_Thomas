@@ -39,7 +39,7 @@ Faites ensuite la commande suivante qui va se charger de les insérer en base de
 7. Enfin ouvrez votre navigateur web et tapez y la l'url suivante :<br>
 <em>http://localhost:8000</em> (ici '8000' sur ma machine mais regardez le numéro du votre dans le terminal lors de l'activation de votre server.)
 
-8. Il vous est possible de lancer les tests et le coverage (couverture des test) après amélioration de votre part en éxécutant les commandes suivantes:<br>
+8. Il vous est possible de lancer les tests et le coverage (couverture des test) après amélioration de votre part en éxécutant les commandes suivantes :<br>
 <em>pytest</em> (lance tout les tests des applications)<br>
 Et pour avoir la couverture des tests faites:<br>
 <em>pytest --cov=users</em> (pour l'application 'users')<br>
@@ -47,6 +47,6 @@ Et pour avoir la couverture des tests faites:<br>
 
 <h2>Liens de la plateforme sur le web</h2>
 
-<p>Vous pouvez toute-fois vous rendre sur le site en ligne à cette adresse:<br>
-<em>https://pur-beurre-cottenceau-thomas.herokuapp.com/</em></p>
+<p>Vous pouvez toute-fois vous rendre sur le site en ligne à cette adresse :<br>
+<em>https://pur-beurre-cottenceau-thomas.herokuapp.com/</em>
 <em>http://178.62.70.233/</em></p>

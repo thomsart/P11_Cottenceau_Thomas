@@ -47,7 +47,11 @@
 
 
 
-
+#category
+{
+  width: 100%;
+  padding-left: 5%;
+}
 
 #id_product
 {

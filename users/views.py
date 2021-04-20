@@ -172,7 +172,6 @@ def user_substitutes(request):
 
     all_ids = []
     for id_save_product in all_id_of_saved_products:
-
         for key, value in id_save_product.items():
             all_ids.append(value)
 
@@ -181,9 +180,22 @@ def user_substitutes(request):
         product = Products.objects.filter(id=each_id).all().values()
         list_of_saved_products.append(product[0])
 
+    list_of_category = []
+    for product in list_of_saved_products:
+        for key, value in product.items():
+            if key == 'cat':
+                if value in list_of_category:
+                    continue
+                else:
+                    list_of_category.append(product['cat'])
+    list_of_category.sort()
+
     context = {
+        'category': list_of_category,
         'products': list_of_saved_products,
     }
+
+    print(context['category'])
 
     return render(request, 'user_substitutes.html', context)
 

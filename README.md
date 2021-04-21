@@ -24,10 +24,10 @@ groupés par categorie dans l'ordre alphabétique ce qui permet une bien meilleu
 3. Une fois activé installé y toutes les dépendances néccéssaires au projet en tapant la commande suivante :<br>
 <em>pip install -r requirements.txt</em>
 
-4. Créez votre base de données à l'aide de Postgrès. Pensez à bien modifier les paramètres liés à votre base de données dans les settings à l'url:<br>
-<em>'startup_pur_beurre/settings/__init__.py'</em>
+4. Créez votre base de données à l'aide de Postgrès. Pensez à bien modifier les paramètres liés à votre base de données dans les settings à l'url :<br>
+<em>startup_pur_beurre/settings/__init__.py</em>
 
-5. Maintenant il est temps de remplir la base de données en y entrant les produits que vous desirez, pour ce faire rendez vous sur l'API 'Open Food Facts' à cette adresse:
+5. Maintenant il est temps de remplir la base de données en y entrant les produits que vous desirez, pour ce faire rendez vous sur l'API Open Food Facts à cette adresse:
 <em>https://fr.openfoodfacts.org/</em><br>
 cherchez une categorie de produits qui vous intéresse et incluez la dans la liste 'category' présente dans fill_db.py<br>
 Faites ensuite la commande suivante qui va se charger de les insérer en base de données :<br>
@@ -41,7 +41,7 @@ Faites ensuite la commande suivante qui va se charger de les insérer en base de
 
 8. Il vous est possible de lancer les tests et le coverage (couverture des test) après amélioration de votre part en éxécutant les commandes suivantes :<br>
 <em>pytest</em> (lance tout les tests des applications)<br>
-Et pour avoir la couverture des tests faites:<br>
+Et pour avoir la couverture des tests faites :<br>
 <em>pytest --cov=users</em> (pour l'application 'users')<br>
 <em>pytest --cov=database</em> (pour l'application 'database')<br>
 

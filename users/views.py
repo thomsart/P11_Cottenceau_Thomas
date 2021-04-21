@@ -180,6 +180,14 @@ def user_substitutes(request):
         product = Products.objects.filter(id=each_id).all().values()
         list_of_saved_products.append(product[0])
 
+    """
+        New feature : from now one the substitues are sort by alphabetical
+        order in the user substitutes board. And for that we pack all these
+        categorys in a list. And then the idea is to iterate on this list to
+        put his substitutes in the same order than this list.
+
+    """
+
     list_of_category = []
     for product in list_of_saved_products:
         for key, value in product.items():

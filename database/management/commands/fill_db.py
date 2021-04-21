@@ -28,7 +28,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
-        category = ['popcorn-sale', 'popcorn-sucre', 'chips-au-sel-et-vinaigre']
+        category = ['comte', 'corn-flakes', 'spaghetti', 'camembert', 'coppa']
 
         for product in category:
 

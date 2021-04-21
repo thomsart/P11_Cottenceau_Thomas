@@ -48,9 +48,12 @@
 
 #category
 {
+  border: solid rgb(151, 142, 142) 1px;
+  border-radius: 10px;
   width: 100%;
   padding-left: 5%;
-  padding-top: 5%;
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 #id_product

@@ -17,6 +17,8 @@ from database.models import Products, SavedProducts, ClientUser
 from .form import *
 from . import context_processor
 
+from .utilities import tools
+
 # Create your views here.
 
 ################################################################################
@@ -188,15 +190,7 @@ def user_substitutes(request):
 
     """
 
-    list_of_category = []
-    for product in list_of_saved_products:
-        for key, value in product.items():
-            if key == 'cat':
-                if value in list_of_category:
-                    continue
-                else:
-                    list_of_category.append(product['cat'])
-    list_of_category.sort()
+    list_of_category = tools.parse_queryset(list_of_saved_products)
 
     context = {
         'categorys': list_of_category,

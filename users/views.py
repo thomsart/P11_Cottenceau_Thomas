@@ -203,8 +203,6 @@ def user_substitutes(request):
         'products': list_of_saved_products,
     }
 
-    print(context['categorys'])
-
     return render(request, 'user_substitutes.html', context)
 
 ################################################################################

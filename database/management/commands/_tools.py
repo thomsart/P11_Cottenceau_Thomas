@@ -26,13 +26,10 @@ def search_json_file(category, num_of_page):
         response = requests.get(url)
         data = response.json()
         key = data.get("products")
-        print(data)
-        print(key)
         number_of_product += len(key)
         list_of_products.append(key)
 
     except Exception:
-        print("Il n'y a plus de '" + category + "' à télécharger.")
 
         return False
 
@@ -102,7 +99,6 @@ def put_products_in_db(dict):
         return True
     
     else:
-        print("Aucun produit n'a été ajouté dans la base.")
         return False
 
 ################################################################################

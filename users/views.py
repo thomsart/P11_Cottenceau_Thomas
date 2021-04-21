@@ -189,7 +189,7 @@ def user_substitutes(request):
         put his substitutes in the same order than this list.
 
     """
-
+    
     list_of_category = tools.parse_queryset(list_of_saved_products)
 
     context = {

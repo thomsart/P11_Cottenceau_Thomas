@@ -17,7 +17,6 @@ def parse_queryset(list_of_saved_products):
         this function takes in the queryset all the differentes categorys of
         product and put them in a list and finaly sort it alphabeticaly.
         If  
-
     """
 
     list_of_category = []

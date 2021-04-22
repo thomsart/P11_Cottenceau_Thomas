@@ -17,7 +17,7 @@ from database.models import Products, SavedProducts, ClientUser
 from .form import *
 from . import context_processor
 
-from .utilities import tools
+from .utilities import users_tools
 
 # Create your views here.
 
@@ -189,8 +189,8 @@ def user_substitutes(request):
         put his substitutes in the same order than this list.
 
     """
-    
-    list_of_category = tools.parse_queryset(list_of_saved_products)
+
+    list_of_category = users_tools.parse_queryset(list_of_saved_products)
 
     context = {
         'categorys': list_of_category,

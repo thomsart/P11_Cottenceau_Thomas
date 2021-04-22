@@ -7,7 +7,7 @@ import json
 from django.test import TestCase
 
 from database.models import Products
-from database.management.commands import _tools as tools
+from database.management.commands import _tools as db_tools
 
 """ Here are all our tools-tests which allows us to fill our database with json
 files we dowloaded from 'Open Food facts API'. """
@@ -92,24 +92,26 @@ class TestViews(TestCase):
                 ]]
             }
 
+        return super().setUp()
+
     def test_is_product_in_file(self):
         """ Here we make sure that there's at least one good product that matchs
         with our model fields in returning 'True'. In the wrong case it return
         'False' we can delete this file. """
 
-        assert tools.is_product_in_file(self.dict_without_product) == False
-        assert tools.is_product_in_file(self.dict_with_product) == True
+        assert db_tools.is_product_in_file(self.dict_without_product) == False
+        assert db_tools.is_product_in_file(self.dict_with_product) == True
 
     def test_put_products_in_db(self):
         """ Here we make sure that this function put in the database a product
         when it matches with our expectations and doesn't put it when it's
         not the case. """
 
-        assert tools.put_products_in_db(self.dict_without_product) == False
-        assert tools.put_products_in_db(self.dict_with_product) == True
-        assert tools.put_products_in_db(
+        assert db_tools.put_products_in_db(self.dict_without_product) == False
+        assert db_tools.put_products_in_db(self.dict_with_product) == True
+        assert db_tools.put_products_in_db(
             self.dict_with_product_which_miss_one_header) == False
-        assert tools.put_products_in_db(
+        assert db_tools.put_products_in_db(
             self.dict_with_product_which_miss_one_field) == False
 
 ################################################################################
